@@ -6,15 +6,54 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 style="text-align: center;">STUDENT REGISTRATION</h1>
+    <p style="text-align: center;">apni puri details yaha daal de jaldi se</p>
+    <hr>
     <form>
-        <label for="name">First name:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Enter your name"> <br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" placeholder="Last name"><br>
-        <br>
-        <label for="Gmail">Gmail</label>
-        <input type="text" id="gmai" name="Gmail" placeholder="Enter you mail"><br>
-        <input type="submit" value="submit">
+        <label for="name"><b>First name:</b></label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your name"> <br><br>
+        <label for="lname"><b>Last name:</b></label><br>
+        <input type="text" id="lname" name="lname" placeholder="Last name"><br><br>
+        <label for="Gmail"><b>Gmail</b></label><br>
+        <input type="text" id="Gmail" name="Gmail" placeholder="Enter you mail"><br><br>
+        <label for="password"><b>Password</b></label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+        <label for="DOB"><b>Date of birth</b></label><br>
+        <input type="date"><br><br>
+        <label for="Gender"><b>Gender</b></label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="gender">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="gender">Female</label>
+        <input type="radio" id="chakka" name="gender" value="chakka">
+        <label for="gender">Chakka beti cho</label><br><br>
+        <label for="Cource"><b>Cource</b></label><br>
+        <select name="cource" id="cource">
+            <option value="">choose your cource</option>
+            <option value="AI/ML">AI/ML</option>
+            <option value="CSE">CSE</option>
+            <option value="Robotics">Robotic</option>
+            <option value="Electronics">Electronics</option>
+        </select><br><br>
+        <label for="intrest"><b>Select your intrested subject</b></label><br><br>
+        <input type="checkbox" id="Web D" name="intrest" value="Web D">
+        <label for="Web D">Web Development</label><br>
+        <input type="checkbox" id="programming" name="intrest" value="programming">
+        <label for="programming">Coding</label><br>
+        <input type="checkbox" id="AI" name="intrest" value="AI">
+        <label for="AI">AI</label><br><br>
+        <label for="phone"><b>Phone number</b></label><br>
+        <input type="tel" id="phoneN" name="phone" placeholder="eg:9179165234" size="30"><br><br>
+        <label for="address"><b>Address dal</b></label><br>
+        <textarea name="address" id="address" rows="4" cols="40" value="ADDRESS DAL DE BHAI"></textarea><br><br>
+        <label for="photo"><b>photo dal apni sundar si</b></label><br>
+        <input type="file" id="photo" name="photo"><br><br>
+        <label for="age"><b>age daal de</b></label><br>
+        <input type="number" id="age" name="age" placeholder="eg:69"><br><br>
+        <label for="submit"></label>
+        <input type="submit" id="submit" name="submit" value="Submit" bgcolor="blue">
+        <input type="reset" id="Reset" name="reset">
+
     </form>
 </body>
 </html>
