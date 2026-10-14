@@ -3,38 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Avirishu Photo Overlay</title>
     <style>
-        .photo{
-            filter: blur(6px);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
+        body {
+            width: 100vw;
+            height: 100dvh; /* Fixes Chrome height bug */
+            overflow: hidden;
+            background-color: #222; 
+            font-family: Arial, sans-serif;
+            
+            /* Centers the photo frame on the screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The Photo Frame Container */
+        .photo-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Photo Scaling */
+        .background {
+            width: 100%;
+            height: 100%;
+            object-fit: fill; /* Stretches the image to fit the exact screen dimensions */
+            display: block;
+            filter: blur(2px);
+        }
+
+        /* The 3x3 Text Grid Overlay (Locks onto the image size) */
+        .name-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            padding: 15px; /* Spacing from the image edges */
+            pointer-events: none;
+        }
+
+        /* Layout grid cells */
+        .name-grid div {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Pure black text style with NO background box */
+        .name-grid div span {
+            font-size: 20px; /* All names are now locked at this size */
+            font-weight: bold;
+            color: #000000; /* Pure black text */
+        }
+
+        /* --- HORIZONTAL ALIGNMENT --- */
+        .left   { justify-content: flex-start; }
+        .center { justify-content: center; }
+        .right  { justify-content: flex-end; }  
+
+        /* --- VERTICAL ALIGNMENT --- */
+        .top    { align-items: flex-start; }
+        .middle { align-items: center; }
+        .bottom { align-items: flex-end; }     
     </style>
 </head>
 <body>
-    <img class="photo"src="/Users/avirishusarathe/Desktop/Web Dev/photograph.jpeg" alt="">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Name Grid</title>
-    <link rel="stylesheet" href="photo.css">
-</head>
-<body>
-    <img src="photograph.jpeg" alt="">
-    <div class="name-grid">
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
-        <div>Avirishu</div>
+
+    <div class="photo-frame">
+        <!-- Replace 'your-photo.jpg' with your actual photo path or URL -->
+        <img class="background" src="photograph.jpeg" alt="Background Picture">
+
+        <!-- The 9-Grid Position Layout -->
+        <div class="name-grid">
+            <!-- Top Row -->
+            <div class="top left"><span>avirishu</span></div>
+            <div class="top center"><span>avirishu</span></div>
+            <div class="top right"><span>avirishu</span></div>
+            
+            <!-- Middle Row -->
+            <div class="middle left"><span>avirishu</span></div>
+            <div class="middle center"><span>avirishu</span></div>
+            <div class="middle right"><span>avirishu</span></div>
+            
+            <!-- Bottom Row -->
+            <div class="bottom left"><span>avirishu</span></div>
+            <div class="bottom center"><span>avirishu</span></div>
+            <div class="bottom right"><span>avirishu</span></div>
+        </div>
     </div>
 
-</body>
-</html>
 </body>
 </html>
