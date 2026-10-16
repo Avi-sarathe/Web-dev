@@ -30,3 +30,22 @@
     flex-wrap: wrap;
     height: 2200px;
 }
+
+.cont2{
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: 2200px;
+    width: 450px;
+}
+
+.cont2 div {
+    background-color: yellow;
+    margin: 11px;
+    padding: 60px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+}
