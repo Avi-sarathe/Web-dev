@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .mainbox{
+            border: 8px solid black;
+            width: 700px;
+            height: 750px;
+        } 
+        .small {
+            background-color: gray;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;            
+            padding: 10px 20px;  
+        }
+        .link {
+            display: flex;                          
+            gap: 19px;   
+            list-style: none;                   
+        }
+        .link a {
+            text-decoration: none;
+            color: black;
+        }
+        .box-container {
+            display:flex;
+            justify-content: space-around; 
+        }
+        .box{
+            border: 2px solid black;
+            width: 100px;
+            height:90px;
+            margin:30px;
+            background-color: yellow;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <nav class="small">
+            <h2>Avirishu Sarathe</h2>
+            <ul class="link">
+                <li><a href="">link 1</a></li>
+                <li><a href="">link 2</a></li>
+                <li><a href="">link 3</a></li>
+                <li><a href="">link 3</a></li>
+            </ul>
+        </nav>
+        <div class="box-container">
+            <div class="box">BOX 1</div>
+            <div class="box">BOX 2</div>
+            <div class="box">BOX 3</div>
+            <div class="box">BOX 4</div>
+        </div>
+    </div>
+</body>
+</html>

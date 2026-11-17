@@ -11,8 +11,8 @@
             font-size: 30px;
             width:150px;
             text-align: center;
+            display: flex;
 }
-
 .cont div {
     background-color: yellow;
     margin: 11px;
@@ -20,8 +20,8 @@
     font-size: 30px;
     width: 50px;
     text-align: center;
+    flex-wrap: wrap;
 }
-
 .cont {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,6 @@
     height: 2200px;
     border:5px solid black
 }
-
 .cont2{
     display: flex;
     flex-direction: row;
